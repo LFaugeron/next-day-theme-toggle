@@ -1,109 +1,198 @@
-'use client'
+"use strict";
 
-import React from 'react';
-import '../index.css'
-import dune from "../assets/dune.png"
-import cactus from "../assets/cactus.png"
-import moon from "../assets/moon.png"
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
 
+var _index = _interopRequireDefault(require("../index.css"));
 
-const DayNightToggle = ({style = "classic", theme, setTheme}) => {
+var _dune = _interopRequireDefault(require("../assets/dune.png"));
 
+var _cactus = _interopRequireDefault(require("../assets/cactus.png"));
+
+var _moon = _interopRequireDefault(require("../assets/moon.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DayNightToggle = function DayNightToggle(_ref) {
+    var _ref$style = _ref.style,
+        style = _ref$style === void 0 ? "classic" : _ref$style,
+        theme = _ref.theme,
+        setTheme = _ref.setTheme;
 
     function changeTheme() {
-        setTheme(!theme)
+        setTheme(!theme);
     }
 
-    if(style === "classic") {
-        return (
-            <div className={!theme ? "theme yellow" : "theme dark"} onClick={changeTheme}>
-                <div className={!theme ? "arc le" : "arc ri"}></div>
-                <div className={!theme ? "arc deux lee" : "arc deux rii"}></div>
-                <div className={!theme ? "arc trois leee" : "arc trois riii"}></div>
-                <div className={!theme ? "sun left" : "sun right hidden"}>
-                    <div className={!theme ? "moon hidde" : "moon"}></div>
-                </div>
-
-                <div className={!theme ? "stars hid one" : "stars one"}></div>
-                <div className={!theme ? "stars hid two" : "stars two"}></div>
-                <div className={!theme ? "stars hid three" : "stars three"}></div>
-                <div className={!theme ? "stars hid four" : "stars four"}></div>
-                <div className={!theme ? "stars hid five" : "stars five"}></div>
-                <div className={!theme ? "cloud o" : "cloud o hidd"}></div>
-                <div className={!theme ? "cloud t" : "cloud t hidd"}></div>
-                <div className={!theme ? "cloud th" : "cloud th hidd"}></div>
-                <div className={!theme ? "cloud f" : "cloud f hidd"}></div>
-                <div className={!theme ? "cloud fi" : "cloud fi hidd"}></div>
-            </div>
-        );
-    } else if(style === "desert") {
-        return (
-            <div className={!theme ? "theme desert" : "theme desertdark"} onClick={changeTheme}>
-                <img src={dune} alt="dune" className={!theme ? "img" : "img deserthid"}/>
-                <img src={dune} alt="dune" className={!theme ? "imgdark desertdarkhid" : "imgdark"}/>
-                <img src={cactus} alt="cactus" className={!theme ? "cactus" : "cactus deserthidde"}/>
-                <img src={cactus} alt="cactus" className={!theme ? "cactus second" : "cactus second deserthidden"}/>
-                <img src={cactus} alt="cactus" className={!theme ? "cactusdark desertdarkhidden" : "cactusdark"}/>
-                <img src={cactus} alt="cactus" className={!theme ? "cactusdark sec desertdarkhidde" : "cactusdark sec"}/>
-                <div className={!theme ? "arc le" : "arc ri"}></div>
-                <div className={!theme ? "arc deux lee" : "arc deux rii"}></div>
-                <div className={!theme ? "arc trois leee" : "arc trois riii"}></div>
-                <div className={!theme ? "sun desertsun left" : "sun desertsun right hidden"}>
-                    <div className={!theme ? "moondesert hidde" : "moondesert"}></div>
-                </div>
-
-                <div className={!theme ? "stars hid one" : "stars one"}></div>
-                <div className={!theme ? "stars hid two" : "stars two"}></div>
-                <div className={!theme ? "stars hid three" : "stars three"}></div>
-                <div className={!theme ? "stars hid four" : "stars four"}></div>
-                <div className={!theme ? "stars hid five" : "stars five"}></div>
-            </div>
-        )
+    if (style === "classic") {
+        return /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "theme yellow" : "theme dark",
+            onClick: changeTheme
+        }, /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "arc le" : "arc ri"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "arc deux lee" : "arc deux rii"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "arc trois leee" : "arc trois riii"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "sun left" : "sun right hidden"
+        }, /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "moon hidde" : "moon"
+        })), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid one" : "stars one"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid two" : "stars two"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid three" : "stars three"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid four" : "stars four"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid five" : "stars five"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "cloud o" : "cloud o hidd"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "cloud t" : "cloud t hidd"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "cloud th" : "cloud th hidd"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "cloud f" : "cloud f hidd"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "cloud fi" : "cloud fi hidd"
+        }));
+    } else if (style === "desert") {
+        return /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "theme desert" : "theme desertdark",
+            onClick: changeTheme
+        }, /*#__PURE__*/_react.default.createElement("img", {
+            src: _dune.default,
+            alt: "dune",
+            className: !theme ? "img" : "img deserthid"
+        }), /*#__PURE__*/_react.default.createElement("img", {
+            src: _dune.default,
+            alt: "dune",
+            className: !theme ? "imgdark desertdarkhid" : "imgdark"
+        }), /*#__PURE__*/_react.default.createElement("img", {
+            src: _cactus.default,
+            alt: "cactus",
+            className: !theme ? "cactus" : "cactus deserthidde"
+        }), /*#__PURE__*/_react.default.createElement("img", {
+            src: _cactus.default,
+            alt: "cactus",
+            className: !theme ? "cactus second" : "cactus second deserthidden"
+        }), /*#__PURE__*/_react.default.createElement("img", {
+            src: _cactus.default,
+            alt: "cactus",
+            className: !theme ? "cactusdark desertdarkhidden" : "cactusdark"
+        }), /*#__PURE__*/_react.default.createElement("img", {
+            src: _cactus.default,
+            alt: "cactus",
+            className: !theme ? "cactusdark sec desertdarkhidde" : "cactusdark sec"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "arc le" : "arc ri"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "arc deux lee" : "arc deux rii"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "arc trois leee" : "arc trois riii"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "sun desertsun left" : "sun desertsun right hidden"
+        }, /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "moondesert hidde" : "moondesert"
+        })), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid one" : "stars one"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid two" : "stars two"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid three" : "stars three"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid four" : "stars four"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "stars hid five" : "stars five"
+        }));
     } else if (style === "minimalist") {
-        return (
-            <div className={!theme ? "theme white" : "theme dark"} onClick={changeTheme}>
-                <div className={!theme ? "sunicon left" : "sunicon right"}>
-                    <div className="relativeparent">
-                        <div className={!theme ? "suniconcenter" : "suniconcenter minimalistehidden"}></div>
-                        <div className={!theme ? "triangle" : "triangle minimalistehidden"} id="un"></div>
-                        <div className={!theme ? "triangle" : "triangle minimalistehidden"} id="deux"></div>
-                        <div className={!theme ? "triangle" : "triangle minimalistehidden"} id="trois"></div>
-                        <div className={!theme ? "triangle" : "triangle minimalistehidden"} id="quatre"></div>
-                        <div className={!theme ? "triangle" : "triangle minimalistehidden"} id="cinq"></div>
-                        <div className={!theme ? "triangle" : "triangle minimalistehidden"} id="six"></div>
-                        <div className={!theme ? "triangle" : "triangle minimalistehidden"} id="sept"></div>
-                        <div className={!theme ? "triangle" : "triangle minimalistehidden"} id="huit"></div>
-                        <img src={moon} alt="moon" className={!theme ? "moonimg minimalistehidden" : "moonimg"}/>
-                    </div>
-                </div>
-            </div>
-        )
+        return /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "theme white" : "theme dark",
+            onClick: changeTheme
+        }, /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "sunicon left" : "sunicon right"
+        }, /*#__PURE__*/_react.default.createElement("div", {
+            className: "relativeparent"
+        }, /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "suniconcenter" : "suniconcenter minimalistehidden"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle" : "triangle minimalistehidden",
+            id: "un"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle" : "triangle minimalistehidden",
+            id: "deux"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle" : "triangle minimalistehidden",
+            id: "trois"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle" : "triangle minimalistehidden",
+            id: "quatre"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle" : "triangle minimalistehidden",
+            id: "cinq"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle" : "triangle minimalistehidden",
+            id: "six"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle" : "triangle minimalistehidden",
+            id: "sept"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle" : "triangle minimalistehidden",
+            id: "huit"
+        }), /*#__PURE__*/_react.default.createElement("img", {
+            src: _moon.default,
+            alt: "moon",
+            className: !theme ? "moonimg minimalistehidden" : "moonimg"
+        }))));
     } else if (style === "second_minimalist") {
-        return (
-            <div className={!theme ? "theme white" : "theme dark"} onClick={changeTheme}>
-                <div className={!theme ? "sunicon left dark" : "sunicon right white"}>
-                    <div className="relativeparent">
-                        <div className={!theme ? "suniconcenter white" : "suniconcenter white    minimalistehidden"}></div>
-                        <div className={!theme ? "triangle white" : "triangle white minimalistehidden"} id="un"></div>
-                        <div className={!theme ? "triangle white" : "triangle white minimalistehidden"} id="deux"></div>
-                        <div className={!theme ? "triangle white" : "triangle white minimalistehidden"} id="trois"></div>
-                        <div className={!theme ? "triangle white" : "triangle white minimalistehidden"} id="quatre"></div>
-                        <div className={!theme ? "triangle white" : "triangle white minimalistehidden"} id="cinq"></div>
-                        <div className={!theme ? "triangle white" : "triangle white minimalistehidden"} id="six"></div>
-                        <div className={!theme ? "triangle white" : "triangle white minimalistehidden"} id="sept"></div>
-                        <div className={!theme ? "triangle white" : "triangle white minimalistehidden"} id="huit"></div>
-                        <img src={moon} alt="moon" className={!theme ? "moonimg minimalistehidden" : "moonimg"}/>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-
-    else {
-        return null
+        return /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "theme white" : "theme dark",
+            onClick: changeTheme
+        }, /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "sunicon left dark" : "sunicon right white"
+        }, /*#__PURE__*/_react.default.createElement("div", {
+            className: "relativeparent"
+        }, /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "suniconcenter white" : "suniconcenter white    minimalistehidden"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle white" : "triangle white minimalistehidden",
+            id: "un"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle white" : "triangle white minimalistehidden",
+            id: "deux"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle white" : "triangle white minimalistehidden",
+            id: "trois"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle white" : "triangle white minimalistehidden",
+            id: "quatre"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle white" : "triangle white minimalistehidden",
+            id: "cinq"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle white" : "triangle white minimalistehidden",
+            id: "six"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle white" : "triangle white minimalistehidden",
+            id: "sept"
+        }), /*#__PURE__*/_react.default.createElement("div", {
+            className: !theme ? "triangle white" : "triangle white minimalistehidden",
+            id: "huit"
+        }), /*#__PURE__*/_react.default.createElement("img", {
+            src: _moon.default,
+            alt: "moon",
+            className: !theme ? "moonimg minimalistehidden" : "moonimg"
+        }))));
+    } else {
+        return null;
     }
 };
 
-
-export default DayNightToggle;
+var _default = DayNightToggle;
+exports.default = _default;
